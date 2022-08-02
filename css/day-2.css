@@ -1,0 +1,17 @@
+/* External css  */
+
+*{
+    background-color: rgb(134, 134, 226);
+}
+p {
+text-align: center;
+color: yellow;
+background-color: black;
+border: 2px solid red;
+}
+#p1{
+text-align: center;
+color: green;
+background-color: black;
+border: 2px solid red;
+}

@@ -24,10 +24,13 @@
   display: inline-flex;
   line-height: 70px;
 }
+.menu li a:hover{
+    transform: scale(0.9);
+    
+}
 .menu li:hover{
     background-color: rgb(215, 122, 0);
     border-radius: 20px;
-    
 }
 ul li a {
   text-decoration: none;
@@ -53,14 +56,19 @@ margin-top: 20px;
   display: flex;
   justify-content: center;
 }
+ .teamcontainer img:hover{
+    transform: scale(1.1);
+}
 .teamcontainer {
   display: flex;
   width: 100%;
   flex-wrap: wrap;
   padding: 5px;
   justify-content: space-evenly;
+  
 }
 .teamcontainer img {
+    
   width: 25%;
   height: auto;
   border-radius: 50%;
@@ -111,6 +119,9 @@ aside > .box{
 .techcontainer{
     display: inline-flex;
 }
+/* .techcontainer .card:hover{
+    transform: scale(1.03);
+} */
 .card {
     background-color: gainsboro;
     width: 23%;
@@ -261,10 +272,14 @@ border-bottom: 1px solid rgb(44, 44, 44);
 .section-2 p a
 {
     text-decoration: none;
-    background-color: red;
+    background-color: rgb(255, 75, 75);
     color: white;
-    padding: 10px;
+    padding: 8px;
     border-radius: 35px;
+}
+.section-2 p a:hover{
+    background-color: rgb(255, 41, 41);
+    transform: scale(0.8);
 }
 .section-3 ul
 {

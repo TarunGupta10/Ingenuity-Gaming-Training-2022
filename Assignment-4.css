@@ -130,9 +130,11 @@ aside > .box{
   }
   .card h2,
   p {
-    padding-top: 7px;
-    padding-bottom: 7px;
+    padding: 7px;
+    /* padding-top: 7px;
+    padding-bottom: 7px; */
     text-align: center;
+    font-family: 'Karla', sans-serif;
   }
   .card a {
     text-align: center;
@@ -312,7 +314,7 @@ border-bottom: 1px solid rgb(44, 44, 44);
 }
 .fa-twitter:hover
 {
-    background-color: skyblue;
+    background-color: rgb(60, 182, 231);
     color: white;
 }
 .fa-google:hover
@@ -327,7 +329,7 @@ border-bottom: 1px solid rgb(44, 44, 44);
 }
 .fa-instagram:hover
 {
-    background-color: magenta;
+    background-color: rgb(255, 0, 111);
     color: white;
 }
 .section-4

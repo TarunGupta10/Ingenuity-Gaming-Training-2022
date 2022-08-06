@@ -96,10 +96,16 @@ main
     display: flex;
     flex-direction: column;
 }
-main img{
+/* main img{
     width: 700px;
     height: 700px;
-}
+} */
+/* main video{
+    width: 700px;
+    height: 700px;
+ 
+} */
+
 
 aside{
     width: 50%;

@@ -7,14 +7,14 @@
 .sky{
     width: 100%;
     height: 100vh;
-    background-image: url(../images/stars.jpg);
+    background-image: url(../images/sky.jpg);
     position: relative;
     overflow: hidden;
 }
 .highway{
     height: 200px;
     width: 300%;
-background-image: url();
+background-image: url(../images/highway.jpg);
 position: absolute;
 bottom: 0;
 left: 0;
@@ -31,7 +31,7 @@ animation: highway 5s linear infinite;
 .city{
     width: 300%;
     height: 200px;
-    background-image: url("./");
+    background-image: url("../images/city.png");
     position: absolute;
     bottom: 200px;
     left: 0;
@@ -100,5 +100,5 @@ left: 80px;
 }
 .back-wheel{
     position: absolute;
-    left: 165px;
+    left: -165px;
     }

@@ -77,12 +77,12 @@
 }
 @keyframes car {
     100% {
-        transform: translateX(1500px);
+        transform:  translateX(1500px) translateY(-4px);
       }
-  /* 0% {
-    transform: translateY(-4px);
+  0% {
+    transform: translateY(0px);
   }
-  50% {
+   /*50% {
     transform: translateY(0px);
   } */
 

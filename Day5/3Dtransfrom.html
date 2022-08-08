@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D</title>
+    <style>
+        .box{
+            height: 300px;
+            width: 250px;
+            background-color: yellow;
+            border: 4px solid red;
+            margin: 200px auto;
+            /* jitna perspective: kam utna obj close */
+            perspective: 500px;
+            /* perspective: 700px; */
+            /* perspective: 100px; */
+           
+
+        }
+        .content{
+            width: 100%;
+            height: 100%;
+            background-color: blue;
+            /* transform: rotate3d(50, 0, 0, 60deg); */
+            /* transform: translate3d(0px, 0px, -50px); */
+            transform: rotate3d(0, 50, 0, 60deg) translateZ(300px);
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div class="content">
+
+        </div>
+    </div>
+</body>
+</html>

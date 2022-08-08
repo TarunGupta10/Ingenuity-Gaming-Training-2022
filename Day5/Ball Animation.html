@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+          .container {
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        img{
+            animation: ball 1.5s ease-in-out infinite;
+            animation-fill-mode: both;
+  animation-direction: reverse;
+  margin-bottom: 94px;
+        }
+        @keyframes ball {
+            0%{
+                transform: translateY(100px)  rotate(360deg);
+            }
+            50%{
+                transform:translateY(0px) rotate(180deg);
+            }
+            100%{
+                transform: translateY(100px)  rotate(0deg);
+            }
+        }
+        .shadow{
+            background-color: grey;
+            width: 35px;
+            height: 10px;
+            border-radius: 90%;
+            animation: shad 1.5s linear infinite;
+        }
+        @keyframes shad {
+            0%{
+                transform: scale(1);
+            }
+            50%{
+                transform: scale(.5);
+            }
+            100%{
+                transform: scale(1);
+            }     
+        }
+
+        .box{
+            display: flex;
+            font-size: 20px;
+        }
+       #par {
+            
+            font-weight: bold;
+            animation: para 2s linear infinite;
+        }
+        @keyframes para {
+            0%{
+                opacity: 1;
+            }
+            50%{
+                opacity: 0;
+            }
+            100%{
+                opacity: 1;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="../images/footabll48.png" alt="">
+        <div class="shadow">
+        </div>
+        <div class="box">
+            <p>LOADING</p>
+          <p id="par">&nbsp;. . .</p>
+        </div>
+    </div>
+</body>
+</html>

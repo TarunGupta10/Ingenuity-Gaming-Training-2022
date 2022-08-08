@@ -52,7 +52,7 @@
   bottom: 500px;
 }
 .jet img {
-  width: 250px;
+  width: 400px;
   animation: jet 3s linear infinite;
 }
 @keyframes jet {

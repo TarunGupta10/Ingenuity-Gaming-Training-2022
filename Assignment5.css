@@ -24,11 +24,27 @@
   animation: highway 5s linear infinite;
   background-size: cover;
 }
+.traffic{
+  position: absolute;
+  bottom: 193px;
+  left: 80%;
+  z-index: 2;
+  animation: traffic 5s linear infinite;
+
+}
+@keyframes traffic {
+  100% {
+    transform: translateX(-1500px);
+  }
+}
+
+
 @keyframes highway {
   100% {
     transform: translateX(-1500px);
   }
 }
+
 .city {
   width: 300%;
   height: 200px;

@@ -27,10 +27,12 @@
 .traffic{
   position: absolute;
   bottom: 193px;
-  left: 80%;
+  left: 100%;
   z-index: 2;
   animation: traffic 5s linear infinite;
-
+}
+.traffic img{
+  width: 28px;
 }
 @keyframes traffic {
   100% {
@@ -77,6 +79,23 @@
     }
     
 }
+.cycle{
+  z-index: 3;
+  /* width: 10px; */
+  position: absolute;
+  transform: translateX(-50%);
+  bottom: 10px;
+}
+.cycle img{
+  width: 400px;
+  animation: cycle 10s linear infinite;
+}
+@keyframes cycle {
+  100%{
+    transform: translateX(1500px);
+  }
+  
+}
 .car {
   width: 400px;
   z-index: 2;
@@ -85,7 +104,7 @@
   position: absolute;
   /* left: 50%; */
    transform: translateX(-50%);
-  bottom: 100px;
+  bottom: 120px;
 }
 .car img {
   width: 100%;
@@ -109,7 +128,7 @@
    /* left: 50%; */
   transform: translateX(-50%);
   z-index: 2;
-  bottom: 185px;
+  bottom: 205px;
 }
 
 .wheel img {

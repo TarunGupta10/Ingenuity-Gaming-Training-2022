@@ -10,11 +10,14 @@ document.write(  "<br>" + date2);
 // Ques = 2
 
 document.body.style.backgroundColor="burlywood";
+document.body.style.margin="250px 0px 0px 635px";
 document.body.style.fontSize="25px";
+document.body.style.fontWeight ="40px";
 document.body.style.color="green";
 
-var name = window.prompt("Enter your name: ");
-document.write("<br>" + "Your name is " + name);
+
+var name = window.prompt("Enter your name");
+document.write("<br>" + "Your name is : " + name.fontcolor("red"));
 
 
 

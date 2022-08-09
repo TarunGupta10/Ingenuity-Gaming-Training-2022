@@ -1,3 +1,4 @@
+
 //Ques - 1
 var today = new Date();
 var date1 = "Today Date : " + today.getDate() + "-" + (today.getMonth()+1) +"-"+today.getFullYear();
@@ -9,11 +10,12 @@ document.write(  "<br>" + date2);
 
 // Ques = 2
 
+document.body.style.border="3px soild black";
 document.body.style.backgroundColor="burlywood";
-document.body.style.margin="250px 0px 0px 635px";
-document.body.style.fontSize="25px";
-document.body.style.fontWeight ="40px";
-document.body.style.color="green";
+document.body.style.margin="220px 0px 0px 580px";
+document.body.style.fontSize="28px";
+document.body.style.fontWeight ="bold";
+document.body.style.color="darkgreen";
 
 
 var name = window.prompt("Enter your name");
@@ -37,3 +39,5 @@ document.write("<br>" + "<i> Division is = </i>" + Division);
 
 // Ques = 4
 // node Assignment-6.js
+
+document.write(  "<br>" + "Execution Command : node Assignment-6.js ");

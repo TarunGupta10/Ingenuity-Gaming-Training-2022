@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Guess the number</title>
+    <style>
+          *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+       
+      }
+      body{
+        background-image: url("./images/wallpaperflare.com.jpg");
+      }
+      h1{
+        color: rgb(75, 161, 236);
+        margin-top: 70px;
+        margin-left: 120px;
+      }
+      #p1{
+        color: aqua;
+        margin-top: 30px;
+        margin-left: 120px;
+      }
+      img{
+        width: 22%;
+        height: 22%;
+        margin-top: 80px;
+        margin-left: 120px;
+
+        border-radius: 30%;
+      }
+
+    </style>
+  </head>
+  <body>
+        <h1>
+        Guess The Number Game</h1>
+    <h3 id="p1"></h3>
+    <img src="./images/num.gif" alt="">
+
+    <script>
+      var y = Math.floor(Math.random() * 10 + 1);
+      var guess = 3;
+
+      while(guess--> 0){
+        var x = parseInt(prompt("Enter a positive integer: "), 10);
+        console.log(guess);
+        if (x == y) {
+          alert(
+            "CONGRATULATIONS!!! YOU GUESSED IT RIGHT IN " +" " + guess + " " + " GUESS "
+          );
+          document.getElementById("p1").innerHTML=  "Yayyy!!! you guessed it correct 🎉🎊";
+          break;
+        }
+        else if (x > y) {
+          alert("OOPS SORRY!! TRY A SMALLER NUMBER" + " " + guess + " "+ " Guess left ");
+        } else {
+          alert("OOPS SORRY!! TRY A GREATER NUMBER" +" "+ guess +" "+ "Guess left");
+          document.getElementById("p1").innerHTML=  "OOPS!!! hard luck you did not get it right 😛😱"
+        }
+      };
+     
+    
+    </script>
+  </body>
+</html>

@@ -5,6 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Guess the number</title>
+    <link href="https://fonts.googleapis.com/css2?family=M+PLUS+1:wght@300&family=Silkscreen&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=DynaPuff&family=M+PLUS+1:wght@300&family=Silkscreen&display=swap" rel="stylesheet">
     <style>
           *{
         margin: 0;
@@ -19,18 +21,21 @@
         color: rgb(75, 161, 236);
         margin-top: 70px;
         margin-left: 120px;
+        font-size: 50px;
+        font-family: 'Silkscreen', cursive;
       }
       #p1{
         color: aqua;
         margin-top: 30px;
         margin-left: 120px;
+        font-family: 'DynaPuff', cursive;
+        font-size: 30px;
       }
-      img{
+      #p3, #p4, img{
         width: 22%;
         height: 22%;
         margin-top: 80px;
         margin-left: 120px;
-
         border-radius: 30%;
       }
 
@@ -40,7 +45,11 @@
         <h1>
         Guess The Number Game</h1>
     <h3 id="p1"></h3>
-    <img src="./images/num.gif" alt="">
+    <img  id="p2"  src="./images/num.gif" alt="">
+    <div id="p3"></div>
+    <div id="p4"></div>
+    <!-- <img  id="p3" src="./images/unlucky.gif" alt=""> -->
+    <!-- <img  id="p4" src="./images/congrats1.gif" alt=""> -->
 
     <script>
       var y = Math.floor(Math.random() * 10 + 1);
@@ -54,6 +63,7 @@
             "CONGRATULATIONS!!! YOU GUESSED IT RIGHT "
           );
           document.getElementById("p1").innerHTML=  "Yayyy!!! you guessed it correct 🎉🎊";
+          // document.getElementById("p4").innerHTML="<img src=\'./images/congrats1.gif\'>";
           break;
         }
         else if (x > y) {
@@ -61,6 +71,7 @@
         } else {
           alert("OOPS SORRY!! TRY A GREATER NUMBER" +" "+ guess +" "+ "Guess left");
           document.getElementById("p1").innerHTML=  "OOPS!!! hard luck you did not get it right 😛😱"
+          // document.getElementById("p3").innerHTML="<img src=\'./images/unlucky.gif\'>";
         }
       };
      

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Assignment 8(b)</title>
+    <style>
+          *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+
+      }
+      body{
+        background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,45,121,1) 35%, rgba(0,212,255,1) 100%);
+      }
+      .con{
+        margin-top: 250px;
+      }
+      #p1{
+      text-align: center;
+       color: yellow;
+      }
+      #p2{
+      text-align: center;
+       color: rgb(225, 255, 0);
+      }
+    </style>
+
+  </head>
+  <body>
+    <div class="con">
+    <h2 id="p1"> </h2>
+    <h2 id="p2"> </h2>
+</div>
+
+    <script>
+        function copying() {
+    var arr1 = [12, 34, 56];
+    var arr2 = [];
+
+    arr1.forEach(function (arr) {
+      arr2.push(arr);
+    });
+    document.getElementById("p1").innerHTML= "Original Array : "  + arr1 + "<br>"
+    document.getElementById("p2").innerHTML= "Copied Array : "  + arr2
+    // document.write("Original Array = " + arr1);
+    // document.write("<br>"+"Copied Array = " + arr2);
+  }
+  copying();
+    </script>
+    
+  </body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 8(a)</title>
+          <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@1,300&display=swap" rel="stylesheet">
+    <style>
+      *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+
+      }
+      body{
+        background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,45,121,1) 35%, rgba(0,212,255,1) 100%);
+      }
+      .con{
+        margin: 250px;
+      }
+      h1{
+        text-align: center;
+       color: rgb(255, 0, 0);
+      }
+      #p1{
+       text-align: center;
+       color: yellow;
+       font-family: 'Signika', sans-serif;
+      }
+    </style>
+</head>
+<body>
+    <div class="con">
+    <h1>After Removing White Spaces</h1>
+    <h2 id="p1"> </h2>
+</div>
+    <script>
+        var str = prompt("Enter a String with Extra White Spaces : ").replace(/\s+/g, ' ').trim();
+        document.getElementById("p1").innerHTML= str
+// document.write(str)
+    </script>
+    
+</body>
+</html>

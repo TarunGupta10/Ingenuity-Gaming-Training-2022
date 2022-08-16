@@ -11,13 +11,23 @@
         margin: 0;
         padding: 0;
         box-sizing: border-box;
-        background-color: rgb(173, 244, 220);
+        /* background-color: rgb(173, 244, 220); */
+
+      }
+      body{
+        background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,45,121,1) 35%, rgba(0,212,255,1) 100%);
       }
       #p1{
        margin-left: 500px;
-       margin-top: 300px;
-       color: blue;
+       margin-top: 150px;
+       color: yellow;
        font-family: 'Signika', sans-serif;
+      }
+      img{
+        width: 25%;
+        height: 25%;
+        margin-top: 80px;
+        margin-left: 600px;
       }
 
 
@@ -27,11 +37,12 @@
   <body>
 
     <h2 id="p1"> </h2>
+    <img src="./images/light2.gif" alt="">
 
     <script>
       let sum = 0;
       while(true) {
-        const num = parseInt(prompt("Enter a positive integer: "));
+        const num = parseInt(prompt("Enter a positive integer for summation and negative number to terminate : "));
         if (num >=  0) {
             sum += num;
         }

@@ -5,25 +5,45 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Information</title>
-    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@1,300&display=swap" rel="stylesheet">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@1,300&display=swap"
+      rel="stylesheet"
+    />
+    <link href="https://fonts.googleapis.com/css2?family=DynaPuff&family=M+PLUS+1:wght@300&family=Silkscreen&display=swap" rel="stylesheet">
+
     <style>
-         *{
+      * {
         margin: 0;
         padding: 0;
         box-sizing: border-box;
-        background-color: burlywood;
+      
       }
-      #p1{
-       margin-left: 400px;
-       margin-top: 300px;
-       color: rgb(212, 41, 41);
-       font-family: 'Signika', sans-serif;
+      body {
+        background: radial-gradient(
+          circle,
+          rgba(238, 174, 202, 1) 0%,
+          rgba(148, 187, 233, 1) 100%
+        );
       }
+      #p1 {
+        margin-left: 400px;
+        margin-top: 150px;
+        /* font-family: "Signika", sans-serif; */
+        font-family: 'DynaPuff', cursive;
+        color: rgb(255, 225, 0);
 
+      }
+      img {
+        width: 35%;
+        height: 35%;
+        margin-top: 20px;
+        margin-left: 500px;
+      }
     </style>
   </head>
   <body>
     <h1 id="p1"></h1>
+    <img src="./images/details5.gif" alt="" />
     <script>
       var info = {
         name: "Tarun Gupta",
@@ -42,8 +62,8 @@
           );
         },
       };
-      document.getElementById("p1").innerHTML= info.details();
-    //   document.write(info.details());
+      document.getElementById("p1").innerHTML = info.details();
+      //   document.write(info.details());
     </script>
   </body>
 </html>

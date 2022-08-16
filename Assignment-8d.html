@@ -1,52 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Assignment 8(d)</title>
     <style>
-        
       * {
         margin: 0;
         padding: 0;
         box-sizing: border-box;
-      
       }
       body {
-background: #94FF68;
-background: -webkit-linear-gradient(right, #94FF68, #8572FF);
-background: -moz-linear-gradient(right, #94FF68, #8572FF);
-background: linear-gradient(to left, #94FF68, #8572FF);
+        background: #94ff68;
+        background: -webkit-linear-gradient(right, #94ff68, #8572ff);
+        background: -moz-linear-gradient(right, #94ff68, #8572ff);
+        background: linear-gradient(to left, #94ff68, #8572ff);
       }
-      .con{
+      .con {
         margin-top: 250px;
       }
-      #p1{
-      text-align: center;
-       color: rgb(255, 0, 0);
+      #p1 {
+        text-align: center;
+        color: rgb(255, 0, 0);
       }
-      #p2{
-      text-align: center;
-       color: rgb(51, 0, 255);
+      #p2 {
+        text-align: center;
+        color: rgb(51, 0, 255);
       }
     </style>
-</head>
-<body>
-
+  </head>
+  <body>
     <div class="con">
-        <h2 id="p1"> </h2>
-        <h2 id="p2"> </h2>
+      <h2 id="p1"></h2>
+      <h2 id="p2"></h2>
     </div>
     <script>
-var car = ['Porche ', 'Audi ',   'Toyota ' ];
-document.getElementById("p1").innerHTML= "Before Adding Element : "  + car + "<br>"
-car.push('BMW');
-document.getElementById("p2").innerHTML= "After Adding Element : "  + car
-// document.write(car);
-    </script> 
-</body>
+      var car = ["Porche ", "Audi ", "Toyota "];
+      document.getElementById("p1").innerHTML =
+        "Before Adding Element : " + car + "<br>";
+      car.push("BMW");
+      document.getElementById("p2").innerHTML = "After Adding Element : " + car;
+      // document.write(car);
+    </script>
+  </body>
 </html>
-
-
-

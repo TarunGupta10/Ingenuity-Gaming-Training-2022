@@ -46,10 +46,9 @@
         Guess The Number Game</h1>
     <h3 id="p1"></h3>
     <img  id="p2"  src="./images/num.gif" alt="">
-    <div id="p3"></div>
-    <div id="p4"></div>
-    <!-- <img  id="p3" src="./images/unlucky.gif" alt=""> -->
-    <!-- <img  id="p4" src="./images/congrats1.gif" alt=""> -->
+    
+    <!-- <img  id="p3" src="./images/unlucky.gif" alt="" style="display: none;">
+    <img  id="p4" src="./images/congrats1.gif" alt="" > -->
 
     <script>
       var y = Math.floor(Math.random() * 10 + 1);
@@ -71,7 +70,9 @@
         } else {
           alert("OOPS SORRY!! TRY A GREATER NUMBER" +" "+ guess +" "+ "Guess left");
           document.getElementById("p1").innerHTML=  "OOPS!!! hard luck you did not get it right 😛😱"
-          // document.getElementById("p3").innerHTML="<img src=\'./images/unlucky.gif\'>";
+          // document.getElementById("p3").style.display = "block";
+          // document.getElementById("p4").style.display = "none";
+
         }
       };
      

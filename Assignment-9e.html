@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Assignment-9(e)</title>
+    <link href="https://fonts.googleapis.com/css2?family=Kalam&display=swap" rel="stylesheet">    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        background: #5aeb7e;
+        background: -webkit-linear-gradient(right, #5aeb7e, #5c7ef3);
+        background: -moz-linear-gradient(right, #5aeb7e, #5c7ef3);
+        background: linear-gradient(to left, #5aeb7e, #5c7ef3);
+      }
+      #p1 {
+        text-align: center;
+        margin: 300px;
+        font-size: 40px;
+        font-family: 'Kalam', cursive;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 id="p1"></h1>
+    <script>
+      function frontBack() {
+        let str = prompt(
+          "Enter String that you want first 3 and last 3 character to make new word : "
+        );
+        if (str.length >= 3) {
+          str_len = 3;
+
+          front = str.substring(0, 3);
+          back = str.substring(str.length - 3);
+          return front + back;
+        } else return str;
+      }
+      document.getElementById("p1").innerHTML =
+        "Your String is : " + frontBack();
+      // document.write(frontBack("abcdefghjkxfghj") + "<br>");
+      // document.write(frontBack("ab") + "<br>");
+      // document.write(frontBack("abcd"));
+    </script>
+  </body>
+</html>

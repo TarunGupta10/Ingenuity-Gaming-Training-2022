@@ -5,78 +5,93 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Guess the number</title>
-    <link href="https://fonts.googleapis.com/css2?family=M+PLUS+1:wght@300&family=Silkscreen&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=DynaPuff&family=M+PLUS+1:wght@300&family=Silkscreen&display=swap" rel="stylesheet">
+    <link
+      href="https://fonts.googleapis.com/css2?family=M+PLUS+1:wght@300&family=Silkscreen&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DynaPuff&family=M+PLUS+1:wght@300&family=Silkscreen&display=swap"
+      rel="stylesheet"
+    />
     <style>
-          *{
+      * {
         margin: 0;
         padding: 0;
         box-sizing: border-box;
-       
       }
-      body{
+      body {
         background-image: url("./images/wallpaperflare.com.jpg");
       }
-      h1{
+      h1 {
         color: rgb(75, 161, 236);
         margin-top: 70px;
         margin-left: 120px;
         font-size: 50px;
-        font-family: 'Silkscreen', cursive;
+        font-family: "Silkscreen", cursive;
       }
-      #p1{
+      #p1 {
         color: aqua;
         margin-top: 30px;
         margin-left: 120px;
-        font-family: 'DynaPuff', cursive;
+        font-family: "DynaPuff", cursive;
         font-size: 30px;
       }
-      #p3, #p4, img{
+      #p3,
+      #p4,
+      img {
         width: 22%;
         height: 22%;
         margin-top: 80px;
         margin-left: 120px;
         border-radius: 30%;
       }
-
     </style>
   </head>
   <body>
-        <h1>
-        Guess The Number Game</h1>
+    <h1>Guess The Number Game</h1>
     <h3 id="p1"></h3>
-    <img  id="p2"  src="./images/num.gif" alt="">
+    <img id="p2" src="./images/num.gif" alt="" />
+    <img id="p4" src="./images/congrats1.gif" alt="" />
+    <img id="p3" src="./images/unlucky.gif" alt="" />
     
-    <!-- <img  id="p3" src="./images/unlucky.gif" alt="" style="display: none;">
-    <img  id="p4" src="./images/congrats1.gif" alt="" > -->
 
     <script>
       var y = Math.floor(Math.random() * 10 + 1);
       var guess = 3;
 
-      while(guess--> 0){
-        var x = parseInt(prompt("Enter a positive integer: "), 10);
+      while (guess-- > 0) {
+        var x = parseInt(prompt("Enter a positive integer b/w 1 to 10: "), 10);
         console.log(guess);
         if (x == y) {
-          alert(
-            "CONGRATULATIONS!!! YOU GUESSED IT RIGHT "
-          );
-          document.getElementById("p1").innerHTML=  "Yayyy!!! you guessed it correct 🎉🎊";
+          alert("CONGRATULATIONS!!! YOU GUESSED IT RIGHT ");
+          document.getElementById("p1").innerHTML =
+            "Yayyy!!! you guessed it correct 🎉🎊";
+          document.getElementById("p4").style.display = "inline-flex";
+          document.getElementById("p3").style.display = "none";
           // document.getElementById("p4").innerHTML="<img src=\'./images/congrats1.gif\'>";
           break;
-        }
-        else if (x > y) {
-          alert("OOPS SORRY!! TRY A SMALLER NUMBER" + " " + guess + " "+ " Guess left ");
+        } else if (x > y) {
+          alert(
+            "OOPS SORRY!! TRY A SMALLER NUMBER" +
+              " " +
+              guess +
+              " " +
+              " Guess left "
+          );
         } else {
-          alert("OOPS SORRY!! TRY A GREATER NUMBER" +" "+ guess +" "+ "Guess left");
-          document.getElementById("p1").innerHTML=  "OOPS!!! hard luck you did not get it right 😛😱"
-          // document.getElementById("p3").style.display = "block";
-          // document.getElementById("p4").style.display = "none";
-
+          alert(
+            "OOPS SORRY!! TRY A GREATER NUMBER" +
+              " " +
+              guess +
+              " " +
+              "Guess left"
+          );
+          document.getElementById("p1").innerHTML =
+            "OOPS!!! hard luck you did not get it right 😛😱";
+          document.getElementById("p3").style.display = "inline-flex";
+          document.getElementById("p4").style.display = "none";
         }
-      };
-     
-    
+      }
     </script>
   </body>
 </html>

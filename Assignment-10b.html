@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Assignment-10(b)</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+background: #FF9B9C;
+background: -webkit-linear-gradient(right, #FF9B9C, #5FFEFF);
+background: -moz-linear-gradient(right, #FF9B9C, #5FFEFF);
+background: linear-gradient(to left, #FF9B9C, #5FFEFF);
+      }
+      .con {
+        margin: 300px;
+      }
+      #p1,
+      #p2 {
+        text-align: center;
+        font-size: 40px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="con">
+      <h2 id="p1"></h2>
+      <h2 id="p2"></h2>
+    </div>
+    <script>
+      var numbers = [8, 27, 64, 125, 216];
+      function cubeRoot(num) {
+        let cubeR = Math.cbrt(num);
+        return cubeR;
+      }
+      let cubeR_num = numbers.map(cubeRoot);
+      document.getElementById("p1").innerHTML = "Numbers : " + numbers + "<br>";
+      document.getElementById("p2").innerHTML = "Cube Roots : " + cubeR_num;
+    </script>
+  </body>
+</html>

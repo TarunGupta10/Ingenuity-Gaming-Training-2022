@@ -1,9 +1,12 @@
 /* @import url('https://fonts.googleapis.com/css2?family=Silkscreen&display=swap'); */
 body {
+  height: 100vh;
     background-image: url("./images/bg10.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: inherit;
+    /* cursor: url("./images/icons8-hammer-100.png"),auto; */
+    cursor: url("./images/icons8-hammer-100.png"),auto;
   }
   
   h1 {

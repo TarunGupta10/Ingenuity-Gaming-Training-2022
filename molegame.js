@@ -32,8 +32,8 @@ function start(){
             moles[r].style.visibility = "visible"
         setTimeout(() => {
             moles[r].style.visibility = "hidden"
-        }, 900); 
-    }, 1000);
+        }, 1200); 
+    }, 1300);
 }
 function incr(){
     counter++;

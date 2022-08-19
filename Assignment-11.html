@@ -5,14 +5,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>WHAKE A MOLE GAME</title>
-    <link href="https://fonts.googleapis.com/css2?family=Silkscreen&display=swap" rel="stylesheet">
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Silkscreen&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="./molegame.css" />
   </head>
   <body>
     <!-- <audio src="./images/song.mp3" autoplay loop></audio> -->
-    <audio autoplay loop>
-      <source src="./images/Song.mp3 " type="audio">
-    </audio>
+    <!-- <audio src="./images/Song.mp3" id="song1"  controls loop autoplay >
+    </audio> -->
     <h1>WHAKE A MOLE</h1>
     <img src="./images/mole.png" id="mole" />
     <img src="./images/dirt.svg" id="mud" />
@@ -24,16 +27,32 @@
     <img src="./images/dirt.svg" id="dirt4" class="dirt" />
     <img src="./images/dirt.svg" id="dirt5" class="dirt" />
     <img src="./images/dirt.svg" id="dirt6" class="dirt" />
-
+    <!-- 
     <img src="./images/mole.png" id="mole1" class="mole" onclick="incr()" />
     <img src="./images/mole.png" id="mole2" class="mole" onclick="incr()"/>
     <img src="./images/mole.png" id="mole3" class="mole" onclick="incr()"/>
     <img src="./images/mole.png" id="mole4" class="mole" onclick="incr()"/>
     <img src="./images/mole.png" id="mole5" class="mole" onclick="incr()"/>
-    <img src="./images/mole.png" id="mole6" class="mole" onclick="incr()"/>
+    <img src="./images/mole.png" id="mole6" class="mole" onclick="incr()"/> -->
 
+    <img src="./images/mole.png" id="mole1" class="mole" onmouseover="incr()" />
+    <img src="./images/mole.png" id="mole2" class="mole" onmouseover="incr()" />
+    <img src="./images/mole.png" id="mole3" class="mole" onmouseover="incr()" />
+    <img src="./images/mole.png" id="mole4" class="mole" onmouseover="incr()" />
+    <img src="./images/mole.png" id="mole5" class="mole" onmouseover="incr()" />
+    <img src="./images/mole.png" id="mole6" class="mole" onmouseover="incr()" />
+
+    
     <span class="points">YOUR POINT :-</span>
     <span id="currentPoint" class="points">0</span>
+    <!-- <span id="timer" class="timerr">00:00</span> -->
+
+    <h3 id="hg"></h3>
+    <div class="con">
+      <span id="sec" class="item">59</span>
+      <span class="time" id="sec">Timer : </span>
+    </div>
+
 
     <script src="./molegame.js"></script>
   </body>

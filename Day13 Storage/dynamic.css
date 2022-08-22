@@ -1,0 +1,52 @@
+.hero{
+    display: flex;
+  }
+  .hero .static-txt{
+    color: #fff;
+    font-size: 40px;
+    font-weight: 400;
+  }
+  .hero .dynamic-txt{
+    margin-left: 15px;
+    height: 90px;
+    line-height: 90px;
+    overflow: hidden;
+  }
+  .dynamic-txt li{
+    list-style: none;
+    color: #16f37d;
+    font-size: 40px;
+    font-weight: 500;
+    position: relative;
+    top: 0;
+    animation: slide 12s steps(3) infinite;
+  }
+  @keyframes slide{
+    100%{
+        top: -360px;
+    }
+  }
+  dynamic-txt li span{
+    
+    position: relative;
+   line-height: 90px;
+   margin: 5px 0;
+  }
+  .dynamic-txt li span::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: #000;
+    border-left: 2px solid #16f37d;
+    animation: typing 3s steps(10) infinite;
+  }
+  @keyframes typing{
+    40%, 60%{
+        left: calc(100% + 30px);
+    }
+    100%{
+        left: 0;
+    }
+  }

@@ -4,12 +4,42 @@ var todoList = document.querySelector(".todo-list");
 var i=1;
 // e stands for event
 
+// for(var i=1;i<=todoList.length;i++){
+//   var Todo="To-Do"+i 
+//   // console.log(Todo)
+//   var data1  = window.localStorage.getItem(Todo)
+//   console.log(data1)
 
+//   var newDiv = document.createElement("div");
+//     newDiv.classList.add("todo");
+//     var newLi = document.createElement("li");
+//     newLi.classList.add("todo_item");
+//     newLi.innerHTML = data1;
+//     newDiv.appendChild(newLi);
+
+//     var cptbtn = document.createElement("button");
+//     cptbtn.classList.add("cptbtn");
+//     cptbtn.innerHTML = '<i class="fa fa-check"></i>';
+//     newDiv.appendChild(cptbtn);
+
+//     var dltbtn = document.createElement("button");
+//     dltbtn.classList.add("dltbtn");
+//     dltbtn.innerHTML = '<i class="fa fa-trash"></i>';
+//     newDiv.appendChild(dltbtn);
+//     todoList.appendChild(newDiv);
+// }
+window.onload = function() {
+var inputArray = [];
+var str = localStorage.getItem('nyArray')
+if (str) {
+    inputArray = JSON.parse(str);
+}
+
+}
 btn.onclick = function createTodo(e) {
   e.preventDefault();
 
   if (
-    
     todoInput.value == "" ||
     todoInput.value == " " ||
     todoInput.value == "  " ||

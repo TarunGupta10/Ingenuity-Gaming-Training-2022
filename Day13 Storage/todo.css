@@ -12,20 +12,46 @@ body {
   font-family: Arial, Helvetica, sans-serif;
   min-height: 100vh;
 }
-
-
-
-
-header,
+h1,
 form {
   height: 15vh;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-header {
+h1 {
   font-size: 40px;
   font-family: 'DynaPuff', cursive;
+  position: relative;
+}
+/* h1::before{
+  font-size: 40px;
+  height: 15vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  content: "To-do List";
+  color: #2ae820;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-right: .4rem solid;
+  animation: slide 3s linear infinite;
+  overflow: hidden;
+} */
+@keyframes slide {
+  0%{
+    width:0%
+  }
+ 
+  50%{
+    width:100%
+  }
+  100%{
+    width:0%
+  }
+  
 }
 
 form input,

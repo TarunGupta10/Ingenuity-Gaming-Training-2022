@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Location Object | BOM</h1>
+    <button onclick="redir()">MonkeyType</button>
+    <script>
+        console.log("page Location : " + location.href);
+        console.log("page Location : " + location.hostname);
+        console.log("page Location : " + location.port);
+        console.log("page Location : " + location.protocol);
+// dynamically kisi page pr redirect kr skte
+        function redir(){
+            location.assign("https://monkeytype.com/")
+        }
+    </script>
+</body>
+</html>

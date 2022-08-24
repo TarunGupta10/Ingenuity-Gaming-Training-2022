@@ -7,14 +7,14 @@ async function getApiData(url) {
 
   var data  = await fetch(url)
   var result = await data.json()
-//   console.log(result);
+  console.log(result);
 displayData(result)
 }
 
 getApiData(API_URL);
 
 function displayData(serverData) {
-  //   console.log(serverData);
+    console.log(serverData);
   for (var user of serverData) {
     let newtr = document.createElement("tr");
 

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+    integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx"
+    crossorigin="anonymous"
+  />
+  <link href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@1,200&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap" rel="stylesheet">
+  <style>
+    *{
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body{
+background: #81E2FF;
+background: -webkit-linear-gradient(right, #81E2FF, #FFF88F);
+background: -moz-linear-gradient(right, #81E2FF, #FFF88F);
+background: linear-gradient(to left, #81E2FF, #FFF88F);
+    }
+    h1{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 20px;
+      font-family: 'Bree Serif', serif;
+    }
+
+    .row
+    {
+      width: 100%;
+      margin: auto;
+      font-size: 20px;
+      font-family: 'Public Sans', sans-serif;
+      font-weight: bolder;
+    }
+  </style>
+</head>
+<body>
+  <h1>Contact Form</h1>
+    <form class="row g-3 needs-validation" novalidate>
+        <div class=" offset-md-3 col-md-5">
+          <label for="validationCustom01" class="form-label">Name</label>
+          <input type="text" class="form-control" id="validationCustom01" placeholder="Enter Your name" required>
+          <div class="valid-feedback">
+            Looks good!
+          </div>
+        </div>
+        <div class="  offset-md-3 col-md-5">
+          <label for="validationCustom02" class="form-label">Email</label>
+          <input type="text" class="form-control" id="validationCustom02" placeholder="Enter Your Email Address" required>
+          <div class="valid-feedback">
+            Looks good!
+          </div>
+        </div>
+        <div class= "offset-md-3 col-md-5">
+            <label for="validationCustom02" class="form-label">On the Scale of 1-10, how good as it</label>
+            <input type="text" class="form-control" id="validationCustom02" placeholder="Give rating between 1-10" required>
+            <div class="valid-feedback">
+              Looks good!
+            </div>
+          </div>
+          <div class="offset-md-3 col-md-5">
+            <label for="validationDefault04" class="form-label">State</label>
+            <select class="form-select" id="validationDefault04" required>
+              <option selected disabled value="">At Home</option>
+              <option>At Office</option>
+              <option>At Collage</option>
+              <option>At Cafeteria</option>
+            </select>
+          </div>
+
+         
+          <label for="validationDefault04" class="form-label  offset-md-3 col-md-5">At what Timing we can contact you</label>
+          <div class="form-check offset-md-6 col-md-5">
+            <label class="form-check-label" for="validationFormCheck3">Morning</label>
+            <input type="radio" class="form-check-input" id="validationFormCheck3" name="radio-stacked" required>
+          </div>
+          <div class="form-check offset-md-6 col-md-5">
+            <label class="form-check-label" for="validationFormCheck2">Afternoon</label>
+            <input type="radio" class="form-check-input" id="validationFormCheck2" name="radio-stacked" required>
+          </div>
+          <div class="form-check offset-md-6 col-md-5">
+            <label class="form-check-label" for="validationFormCheck3">Night</label>
+            <input type="radio" class="form-check-input" id="validationFormCheck3" name="radio-stacked" required>
+          </div>
+          <label for="validationDefault04" class="form-label  offset-md-3 col-md-5">What Emotions did you Experience ? (Select all that apply)</label>
+          <div class="form-check offset-md-6 col-md-5">
+            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+            <label class="form-check-label" for="flexCheckDefault">
+              Excited
+            </label>
+          </div>
+          <div class="form-check offset-md-6 col-md-5">
+            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+            <label class="form-check-label" for="flexCheckDefault">
+              Humbled
+            </label>
+          </div>
+          <div class="form-check offset-md-6 col-md-5">
+            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+            <label class="form-check-label" for="flexCheckDefault">
+              Elated
+            </label>
+          </div>
+          <div class="form-check offset-md-6 col-md-5">
+            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+            <label class="form-check-label" for="flexCheckDefault">
+              Loved
+            </label>
+          </div>
+          <div class="form-check offset-md-6 col-md-5">
+            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+            <label class="form-check-label" for="flexCheckDefault">
+              Enthusiastic
+            </label>
+          </div>
+          <div class="offset-md-3 col-md-5">
+            <label for="exampleFormControlTextarea1" class="form-label">Please describe your positive experience</label>
+            <textarea class="form-control" id="exampleFormControlTextarea1"placeholder="Enter Your Experience here" rows="3"></textarea>
+          </div>
+        <div class="col-12 offset-md-5 col-md-5">
+          <button class="btn btn-primary" type="submit">Submit form</button>
+        </div>
+      </form>
+    
+</body>
+</html>

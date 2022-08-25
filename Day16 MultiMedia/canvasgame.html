@@ -6,10 +6,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Canvas API</title>
     <link rel="stylesheet" href="./canvas.css">
+    <style>
+         * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+         body {
+        min-height: 100vh;
+        color: white;
+        background-color: rgba(0, 0, 0, 0.755);
+        font-family: arial;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+      }
+        #source1{
+            display: none;
+        }
+    </style>
 </head>
 <body>
-    <canvas id="canvas" width="500" height="700"></canvas>
-    <img src="" alt="">
+    <canvas id="canvas" width="900" height="600"></canvas>
+    <img src="../images/icons8-football-32.png" alt="" id="source1">
     <script src="./canvasgame.js"></script>
 </body>
 </html>

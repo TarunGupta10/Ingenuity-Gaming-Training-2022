@@ -11,7 +11,7 @@ getApiData(API_URL);
 function displayData(serverData) {
   console.log(serverData);
 
-  for (let i=2;i<190;i++) {
+  for (let i=1;i<190;i++) {
     let option = document.createElement("option");
     option.value = i
     option.innerHTML  = serverData.Countries[i].Country

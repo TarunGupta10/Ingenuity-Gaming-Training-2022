@@ -1,0 +1,38 @@
+
+#source{
+    displey none           image 
+}
+conat player{
+    w h dx dy x y  speed
+}
+
+
+nw pos{
+    circle.x += circle.dx
+    circle.y += circle.dy
+}
+
+
+
+
+
+fn keydown(e){
+    if(e.key=== "ArrowRight" || e.key ==="right")
+    moveright{}
+}
+
+
+
+
+
+fn keyup(e){
+if()
+}
+else{
+    player.dy=0
+}
+
+update()
+
+docu.addevelist("keydown",keydown)
+docu.addevelist("keyup",keyup)

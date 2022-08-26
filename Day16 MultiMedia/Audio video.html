@@ -1,52 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Audio Tag</title>
-</head>
-<body>
+  </head>
+  <body>
     <!-- <audio controls loop autoplay muted hidden> -->
-    <audio controls loop  id="myAudio" >
-        <source src="../images/Song.mp3" type="audio/mp3" />
+    <audio controls loop id="myAudio">
+      <source src="../images/Song.mp3" type="audio/mp3" />
 
-        <!-- if first source is not available then pick up another source -->
-        <!-- <source src="../images/Song.mp3" type="audio/mp3" /> -->
+      <!-- if first source is not available then pick up another source -->
+      <!-- <source src="../images/Song.mp3" type="audio/mp3" /> -->
     </audio>
     <button id="btn1">Play</button>
     <!-- <video loop autoplay width="600" height="600"> -->
-        <!-- <source src="../images/video1.mp4" type="video/mp4" /> -->
-        <!-- if first source is not available then pick up another source -->
-        <!-- <source src="../images/vid.mp4" type="audio/mp4" /> -->
+    <!-- <source src="../images/video1.mp4" type="video/mp4" /> -->
+    <!-- if first source is not available then pick up another source -->
+    <!-- <source src="../images/vid.mp4" type="audio/mp4" /> -->
     <!-- </video> -->
 
     <script>
-        var myAudio = document.getElementById("myAudio")
-        // console.log(myAudio);
-        var btn = document.getElementById("btn1")
-        btn.onclick = performanceTasks
-        function performanceTasks(){
-            // myAudio.play()
-            myAudio.src = "../images/Song.mp3"
-            myAudio.play()
-            myAudio.load()
-            myAudio.autoplay = true
-            if(myAudio.muted == true){
-                myAudio.muted = false
-            }
-            else{
-                myAudio.muted = true
-            }
-        }
-        var newAudio = new Audio()
-        newAudio.src = "../images/Song.mp3"
-        newAudio.play()
-        newAudio.loop()  = true
-        // newAudio.load()
-        // newAudio.play()
+      var myAudio = document.getElementById("myAudio")
+      // console.log(myAudio);
+      var btn = document.getElementById("btn1")
+      btn.onclick = performanceTasks
+      function performanceTasks(){
+          // myAudio.play()
+          myAudio.src = "../images/Song.mp3"
+          myAudio.play()
+          myAudio.load()
+          myAudio.autoplay = true
+          if(myAudio.muted == true){
+              myAudio.muted = false
+          }
+          else{
+              myAudio.muted = true
+          }
+      }
+      var newAudio = new Audio()
+      newAudio.src = "../images/Song.mp3"
+      newAudio.play()
+      newAudio.loop()  = true
+      // newAudio.load()
+      // newAudio.play()
     </script>
-
-
-</body>
+  </body>
 </html>

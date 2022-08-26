@@ -1,4 +1,26 @@
 // selector
+
+var myAudio = document.getElementById("myAudio")
+var btn = document.getElementById("img2")
+btn.onclick = performanceTasks
+function performanceTasks(){
+    myAudio.play()
+    myAudio.load()
+    myAudio.autoplay = true
+    if(myAudio.muted == true){
+        myAudio.muted = false
+        document.getElementById("img2").style.display = "none"
+        document.getElementById("img1").style.display = "inline-flex"
+    }
+    else{
+        myAudio.muted = true
+        document.getElementById("img2").style.display = "inline-flex"
+        document.getElementById("img1").style.display = "none"
+    }
+}
+
+
+
 var canvas = document.getElementById("canvas");
 var ctx = canvas.getContext("2d");
 
@@ -11,34 +33,33 @@ const player = {
   x: 20,
   y: 200,
   speed: 5,
-  size:40,
+  size: 50,
   dx: 0,
-  dy: 0
+  dy: 0,
 };
 
 var circle = {
-    w:40,
-    h:40,
-    x: 200,
-    y: 200,
-    size: 40,
-    dx: 5,
-    dy: 5,
-  };
+  w: 30,
+  h: 30,
+  x: 200,
+  y: 200,
+  size: 40,
+  dx: 5,
+  dy: 5,
+};
 
 function drawPlayer() {
   ctx.drawImage(image, player.x, player.y, player.w, player.h);
 }
 
 function drawCircle() {
-    ctx.beginPath();
-    ctx.drawImage(image1,circle.x, circle.y, circle.w,circle.h);
-  }
+  ctx.beginPath();
+  ctx.drawImage(image1, circle.x, circle.y, circle.w, circle.h);
+}
 
 function clear() {
   ctx.clearRect(0, 0, canvas.width, canvas.height);
 }
-
 
 function newPos() {
   player.x += player.dx;
@@ -47,15 +68,15 @@ function newPos() {
   detectWalls();
 }
 
-function ballPos(){
-    circle.x += circle.dx;
-    circle.y += circle.dy;
+function ballPos() {
+  circle.x += circle.dx;
+  circle.y += circle.dy;
 
-    detectWalls1()
+  detectWalls1();
 }
 
-function detectWalls1(){
-    if (circle.x + circle.size > canvas.width || circle.x - circle.size < 0)
+function detectWalls1() {
+  if (circle.x + circle.size > canvas.width || circle.x - circle.size < 0)
     circle.dx *= -1;
 
   if (circle.y + circle.size > canvas.height || circle.y - circle.size < 0)
@@ -84,27 +105,6 @@ function detectWalls() {
   }
 }
 
-// function collide(cir1, cir2) {
-//     var dx1 = (cir1.x - cir2.x) / cir1.size;
-//     var dy1 = (cir1.y - cir2.y) / cir1.size;
-//     cir2.dx = -dx1;
-//     cir2.dy = -dy1;
-//     cir1.dx = dx1;
-//     cir1.dy = dy1;
-//   }
-//   function getDistance(x1, y1, x2, y2) {
-//     return Math.sqrt(Math.pow(x1 - x2, 2) + Math.pow(y1 - y2, 2));
-//   }
-
-
-// function playerball_Collision() {
-//     var player_circle_distance = getDistance(player.x, player.y, circle.x, circle.y) -player.size -circle.size;
-//     if (player_circle_distance < 0) {
-//       collide(circle, player);
-//     }
-//   }
-
-
 // Create Animation
 function update() {
   clear();
@@ -112,10 +112,9 @@ function update() {
   drawPlayer();
   drawCircle();
 
-//   playerball_Collision()
+  //   playerball_Collision()
   newPos();
   ballPos();
-
 
   requestAnimationFrame(update);
 }
@@ -169,3 +168,22 @@ update();
 
 document.addEventListener("keydown", keyDown);
 document.addEventListener("keyup", keyUp);
+
+// function collide(cir1, cir2) {
+//     var dx1 = (cir1.x - cir2.x) / cir1.size;
+//     var dy1 = (cir1.y - cir2.y) / cir1.size;
+//     cir2.dx = -dx1;
+//     cir2.dy = -dy1;
+//     cir1.dx = dx1;
+//     cir1.dy = dy1;
+//   }
+//   function getDistance(x1, y1, x2, y2) {
+//     return Math.sqrt(Math.pow(x1 - x2, 2) + Math.pow(y1 - y2, 2));
+//   }
+
+// function playerball_Collision() {
+//     var player_circle_distance = getDistance(player.x, player.y, circle.x, circle.y) -player.size -circle.size;
+//     if (player_circle_distance < 0) {
+//       collide(circle, player);
+//     }
+//   }

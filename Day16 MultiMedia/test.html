@@ -29,10 +29,12 @@
         margin-top: 10px;
         /* background-color: azure; */
         /* background-image: url("./images/game3.png"); */
-        background: #aaf1ff;
+        /* background: #aaf1ff;
         background: -webkit-linear-gradient(left, #aaf1ff, #fdff5e);
         background: -moz-linear-gradient(left, #aaf1ff, #fdff5e);
-        background: linear-gradient(to right, #aaf1ff, #fdff5e);
+        background: linear-gradient(to right, #aaf1ff, #fdff5e); */
+        background: url("../images/fb.png") no-repeat fixed center;
+        background-size: inherit;
         border-radius: 10px;
       }
       h1 {
@@ -52,11 +54,22 @@
       #source1 {
         display: none;
       }
+      #img1{
+display: none;
+      }
+      #img{
+        display: inline-flex;
+      }
     </style>
   </head>
 
   <body>
-    <h1>Canvas Game</h1>
+    <audio controls loop hidden id="myAudio" >
+      <source src="../images/Song.mp3" type="audio/mp3" />
+  </audio>
+<img src="../images/icons8-volumeup-50.png" alt=""  id="img1">
+  <img src="../images/icons8-volumedown-50.png" alt=""  id="img2">
+    <h1>Football Game</h1>
     <canvas id="canvas" width="900" height="600"> </canvas>
     <!-- <img src="https://i.ibb.co/HHBFJdH/char.png" alt="" id="source" /> -->
     <img src="../images/amongus-removebg-preview.png" alt="" id="source" />

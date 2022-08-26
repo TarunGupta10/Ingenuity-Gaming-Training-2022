@@ -61,6 +61,27 @@ function clear() {
   ctx.clearRect(0, 0, canvas.width, canvas.height);
 }
 
+
+function collide(cir1, cir2) {
+    var dx1 = (cir1.x - cir2.x) / cir1.size;
+    var dy1 = (cir1.y - cir2.y) / cir1.size;
+    cir2.dx = -dx1;
+    cir2.dy = -dy1;
+    cir1.dx = dx1;
+    cir1.dy = dy1;
+  }
+  function getDistance(x1, y1, x2, y2) {
+    return Math.sqrt(Math.pow(x1 - x2, 2) + Math.pow(y1 - y2, 2));
+  }
+
+function playerball_Collision() {
+    var player_circle_distance = getDistance(player.x, player.y, circle.x, circle.y) -player.size -circle.size;
+    if (player_circle_distance < 0) {
+      collide(circle, player);
+    }
+  }
+
+
 function newPos() {
   player.x += player.dx;
   player.y += player.dy;

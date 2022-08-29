@@ -7,6 +7,7 @@ var brickGroup, brickImage;
 
 var coinImage, coinsGroup;
 var coinScore = 0;
+var bgSound;
 
 var mushObstacleImage, turtleObstacleImage, obstaclesGroup;
 
@@ -60,10 +61,13 @@ function preload() {
   dieSound = loadSound("sounds/dieSound.mp3");
 
   restartImg = loadImage("images/restart.png");
+  bgSound = loadSound("./sounds/mario-bg.mp3");
 }
 
 function setup() {
   createCanvas(1000, 600);
+  bgSound.play();
+  bgSound.loop();
   bg = createSprite(600, 300);
   bg.addImage(bgImage);
   bg.scale = 0.5;
@@ -144,6 +148,7 @@ function draw() {
     generateObstacles();
     if (obstaclesGroup.isTouching(mario)) {
       dieSound.play();
+      bgSound.stop();
       gameState = "END";
     }
   } 

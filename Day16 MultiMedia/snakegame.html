@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Snake Game</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+      body {
+        min-height: 100vh;
+        color: white;
+        background-color: rgba(0, 0, 0, 0.755);
+        font-family: arial;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+      }
+      h1 {
+        font-family: "Press Start 2P", cursive;
+        margin-bottom: 20px;
+        background: #01eeff;
+        background: -webkit-linear-gradient(right, #01eeff, #d035ba);
+        background: -moz-linear-gradient(right, #01eeff, #d035ba);
+        background: linear-gradient(to left, #01eeff, #d035ba);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+      canvas {
+        border: 1px solid white;
+      }
+      #source {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Snake Game</h1>
+    <canvas width="600" height="600" id="game"></canvas>
+    <img src="" alt="">
+    <script src="./snakegame.js" id="source"></script>
+  </body>
+</html>

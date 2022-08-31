@@ -1,0 +1,17 @@
+cd ./Day-19
+cd ./Bundler
+
+
+npm init -y
+
+npm install lodash
+lodash 1 library hai jisme bhot saare inbuild functions bane hote hai jinhe hum use kr skte hai
+
+npm install webpack webpack-cli 
+change build in webpack   =   "build": "webpack"
+then run   npn run build
+then a dist folder is made automatically
+then change dir to dist      cd ./dist
+then run node main.js  
+
+../ dir se bahar nikalne ke lie

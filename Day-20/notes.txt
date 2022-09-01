@@ -1,0 +1,22 @@
+    npm init -y
+then install gulp-cli globally
+    npm i gulp-cli -g
+then install gulp for development version
+    npm i gulp -D
+
+
+npm  i  for install all the packages that are not downloaded yet
+
+gulp is a task runner
+
+gulp fn name   = copyHtml
+    gulp copyHtml
+
+run gulp for default
+    gulp
+
+
+pipe = then
+
+
+** = search child as well or including the sub fulder as well 

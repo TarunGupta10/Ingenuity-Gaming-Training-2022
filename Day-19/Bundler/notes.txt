@@ -17,3 +17,7 @@ then change dir to dist      cd ./dist
 then run node main.js  
 
 ../ dir se bahar nikalne ke lie
+
+npm, yarn, bower
+
+npm uninstall package name

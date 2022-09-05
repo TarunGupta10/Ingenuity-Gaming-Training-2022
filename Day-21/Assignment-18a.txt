@@ -18,4 +18,4 @@ open tsconfig.json and change
 then save the changes
 run tsc command in the terminal
 it will create the dist folder
-and in the dist folder there is a file with .js extension
+and in the dist folder there is a file with .js extensions

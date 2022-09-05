@@ -1,0 +1,21 @@
+first Install TypeScript
+    npm uninstall -g typescript
+then check Version
+    tsc -v
+make a folder with src name
+then under src folder make a .ts file
+write some code in it
+
+write tsc --init command in terminal 
+it will create tsconfig.json file
+
+open tsconfig.json and change 
+    "rootDir": "./",  to "rootDir": "./src",  
+     "outDir": "./",  to  "outDir": "./dist", 
+     "removeComments": true, 
+     "noEmitOnError": true,
+
+then save the changes
+run tsc command in the terminal
+it will create the dist folder
+and in the dist folder there is a file with .js extension

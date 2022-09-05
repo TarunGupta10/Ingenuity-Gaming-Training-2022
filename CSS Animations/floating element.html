@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>floating element</title>
+    <link
+    rel="stylesheet"
+    href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+  />
+  <style>
+    .icon{
+        display: inline-block;
+        font-size: 44px;
+        animation: float 5s ease-in-out infinite
+    }
+    .fa fa-facebook{
+        animation-delay: 1s;
+    }
+    .fa fa-twitter{
+        animation-delay: 2s;
+    }
+    @keyframes float {
+        0%{
+            transform: translateY(0);
+        }
+        50%{
+            transform: translateY((-15px));
+        }
+        100%{
+            transform: translateY(0);
+        }
+    }
+
+
+  </style>
+  </head>
+  <body>
+    <div class="icon-wrapper">
+      <!-- <img src="../images/icons8-facebook-48.png" alt="">
+        <img src="../images/icons8-instagram-48.png" alt="">
+        <img src="../images/icons8-whatsapp48.png" alt=""> -->
+      <i class="fa fa-facebook icon"></i>
+      <i class="fa fa-instagram icon"></i>
+      <i class="fa fa-twitter icon"></i>
+    </div>
+  </body>
+</html>

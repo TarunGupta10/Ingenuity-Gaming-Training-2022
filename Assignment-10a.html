@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Assignment-10(a)</title>
+    <style>
+        * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        background: #eb755a;
+        background: -webkit-linear-gradient(left, #eb755a, #d95cf3);
+        background: -moz-linear-gradient(left, #eb755a, #d95cf3);
+        background: linear-gradient(to right, #eb755a, #d95cf3);
+      }
+      .con{
+        margin: 300px;
+      }
+      #p1, #p2 {
+        text-align: center;
+        font-size: 40px;
+      }
+    </style>
+</head>
+
+<body>
+    <div class="con">
+    <h2 id="p1"></h2>
+    <h2 id="p2"></h2>
+</div>
+    <script>
+        var person = {
+            fullName: function (city,country) {
+                return (
+                    "I am " +
+                    this.firstName +
+                    " " +
+                    this.lastName +
+                    " from " +
+                    city +
+                    ", " +
+                    country
+                );
+            },
+        };
+
+        var person1 = {
+            firstName: prompt("Enter your First Name  : "),
+            lastName: prompt("Enter your last Name  : "),
+        };
+        document.getElementById("p1").innerHTML="By Call() Method : " + person.fullName.call(
+                person1,
+                prompt("Enter city"),
+                prompt("Enter Country")
+            )
+            document.getElementById("p2").innerHTML="By Apply() Method : " + (person.fullName.apply(person1, ["Agra", "India"]));
+        // document.write(
+        //     person.fullName.call(
+        //         person1,
+        //         prompt("Enter city"),
+        //         prompt("Enter Country")
+        //     )
+        // );
+    </script>
+</body>
+
+</html>

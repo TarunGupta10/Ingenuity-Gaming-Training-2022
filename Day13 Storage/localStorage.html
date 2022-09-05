@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>web Storage</title>
+  </head>
+  <body>
+    <h1>local Storage | Session Storage</h1>
+    <pre>
+    <label for=""> Enter UserName</label> <input type="text" id="userName">
+   
+                    <button id="add"> Store Info </button> <button id="remove"> Remove Store Data </button>
+                   
+</pre>
+    <p id="output">
+    </p>
+    <a href="details.html">See details</a>
+
+    <script>
+      var uname = document.getElementById("userName");
+      
+      var btn = document.getElementById("add");
+      var btn1 = document.getElementById("remove");
+      var output = document.getElementById("output");
+
+      btn.onclick = storeData;
+
+      function storeData() {
+        var data = uname.value;
+        // window.localStorage.setItem( key,data)
+        window.localStorage.setItem("Info", data);
+        alert("data store in local storage");
+      }
+      btn1.onclick = removeData;
+
+      function removeData() {
+        
+        window.localStorage.removeItem("Info")
+        output.innerText = "Data Removed: " + new Date().toLocaleString();
+      }
+    </script>
+  </body>
+</html>

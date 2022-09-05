@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Assignment-13(c)</title>
+    <link href="https://fonts.googleapis.com/css2?family=DynaPuff&display=swap" rel="stylesheet">
+    <link
+      rel="stylesheet"
+      href="https://unicons.iconscout.com/release/v3.0.6/css/line.css"
+    />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Poppins", sans-serif;
+      }
+      body {
+        overflow: hidden;
+background: #FF6CD6;
+background: -webkit-linear-gradient(left, #FF6CD6, #3F5BD9);
+background: -moz-linear-gradient(left, #FF6CD6, #3F5BD9);
+background: linear-gradient(to right, #FF6CD6, #3F5BD9);
+      }
+      h1{
+        margin-top: 300px;
+        margin-left: 550px;
+        font-family: 'DynaPuff', cursive;
+      }
+      .container {
+        position: absolute;
+        top: 60px;
+        left: 20px;
+        animation: show_innercon 1s ease forwards;
+      }
+      @keyframes show_innercon {
+        0% {
+          transform: translateX(-100%);
+        }
+        40% {
+          transform: translateX(10%);
+        }
+        80%,
+        100% {
+          transform: translateX(20px);
+        }
+      }
+      .container.hide {
+        animation: hide_innercon 1s ease forwards;
+      }
+      @keyframes hide_innercon {
+        0% {
+          transform: translateX(20px);
+        }
+        40% {
+          transform: translateX(10%);
+        }
+        80%,
+        100% {
+          opacity: 0;
+          pointer-events: none;
+          transform: translateX(-100%);
+        }
+      }
+      .container .innercon {
+        background: #fff;
+        padding: 20px 15px 20px 20px;
+        border-radius: 10px;
+        border-left: 5px solid #2ecc71;
+        border-right: 5px solid #2ecc71;
+        box-shadow: 1px 7px 14px -5px rgba(0, 0, 0, 0.15);
+        width: 430px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+      .container .innercon.offlinestatus {
+        border-color: #ccc;
+      }
+      .innercon .content {
+        display: flex;
+        align-items: center;
+      }
+      .content .icon {
+        font-size: 25px;
+        color: #fff;
+        height: 50px;
+        width: 50px;
+        text-align: center;
+        line-height: 50px;
+        border-radius: 50%;
+        background: #2ecc71;
+      }
+      .innercon.offlinestatus .content .icon {
+        background: #ccc;
+      }
+      .content .details {
+        margin-left: 15px;
+      }
+      .details span {
+        font-size: 20px;
+        font-weight: 500;
+      }
+      .details p {
+        color: #878787;
+      }
+      .innercon .close-icon {
+        color: #878787;
+        font-size: 23px;
+        cursor: pointer;
+        height: 40px;
+        width: 40px;
+        text-align: center;
+        line-height: 40px;
+        border-radius: 50%;
+        background: #f2f2f2;
+        transition: all 0.3s ease;
+      }
+      .close-icon:hover {
+        background: #efefef;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Internet Connection Check</h1>
+    <div class="container">
+      <div class="innercon">
+        <div class="content">
+          <div class="icon"><i class="uil uil-wifi"></i></div>
+          <div class="details">
+            <span>You're online now 😃</span>
+            <p>Hurray! Internet is connected.</p>
+          </div>
+        </div>
+        <div class="close-icon"><i class="uil uil-times"></i></div>
+      </div>
+    </div>
+
+    <script>
+      const container = document.querySelector(".container"),
+        innercon = container.querySelector(".innercon"),
+        title = innercon.querySelector("span"),
+        subTitle = innercon.querySelector("p"),
+        wifiIcon = innercon.querySelector(".icon"),
+        closeIcon = innercon.querySelector(".close-icon");
+
+      function onlinestatus() {
+        innercon.classList.remove("offlinestatus");
+        title.innerText = "You're online now 😃";
+        subTitle.innerText = "Hurray! Internet is connected.";
+        wifiIcon.innerHTML = '<i class="uil uil-wifi"></i>';
+        closeIcon.onclick = () => {
+          container.classList.add("hide");
+        };
+      }
+
+      function offlinestatus() {
+        innercon.classList.add("offlinestatus");
+        title.innerText = "You're offline now 🧐";
+        subTitle.innerText = "Opps! Internet is disconnected.";
+        wifiIcon.innerHTML = '<i class="uil uil-wifi-slash"></i>';
+        container.classList.remove("hide");
+      }
+
+      window.onload = function () {
+        setInterval(() => {
+          if (navigator.onLine) {
+            onlinestatus();
+            setTimeout(() => {
+              container.classList.add("hide");
+              // container.style.display = "none"
+
+            }, 3000);
+          } else {
+            offlinestatus();
+            container.style.display = "flex"
+            // setTimeout(() => {
+            //   container.classList.add("hide");
+            // }, 3000);
+          }
+        }, 3000);
+      };
+    </script>
+  </body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Assignment-9(d)</title>
+    <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap" rel="stylesheet">
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+background: #DCEB5A;
+background: -webkit-linear-gradient(right, #DCEB5A, #F35CE6);
+background: -moz-linear-gradient(right, #DCEB5A, #F35CE6);
+background: linear-gradient(to left, #DCEB5A, #F35CE6);
+      }
+      #p1 {
+        text-align: center;
+        margin: 300px;
+        font-size: 40px;
+        font-family: 'Patrick Hand', cursive;
+      }
+    </style>
+  </head>
+  <body>
+    <h2 id="p1"></h2>
+    <script>
+      function addStr() {
+        let str = prompt("Enter anything with New! or without New! : ");
+        if (
+          str === null ||
+          str === undefined ||
+          str.substring(0, 4) === "New!"
+        ) {
+          return str;
+        }
+        return "New! " + str;
+      }
+      document.getElementById("p1").innerHTML= "Your String is : " + addStr()
+
+      // document.write(addStr("New! Tarun") + "<br>");
+      // document.write(addStr(" Tarun"));
+    </script>
+  </body>
+</html>

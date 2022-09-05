@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<ht lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="btn" onclick="openWindow()">open new window</button>
+    <script>
+        function openWindow() {
+            // var url = "https://monkeytype.com/"
+            var url = "../Day13 Storage/todo.html"
+            var windowSize = "height=500, width=500"
+            var newWindow = window.open(url, "Typing Page", windowSize)
+
+            // move new window to specified position (top, left)
+            newWindow.moveTo(500,100)
+        }
+    </script>
+</body>
+</ht

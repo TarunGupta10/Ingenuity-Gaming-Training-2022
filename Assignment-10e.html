@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Assignment-10(e)</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+background: #FF9B9C;
+background: -webkit-linear-gradient(right, #FF9B9C, #5FFEFF);
+background: -moz-linear-gradient(right, #FF9B9C, #5FFEFF);
+background: linear-gradient(to left, #FF9B9C, #5FFEFF);
+      }
+      #p1 {
+        /* margin: 200px; */
+        text-align: center;
+        font-size: 25px;
+      }
+    </style>
+  </head>
+  <body>
+    <h2 id="p1"></h2>
+    <script>
+      let persons = [
+        { name: "Tarun", age: 21 },
+        { name: "Astha", age: 22 },
+        { name: "Prachi", age: 25 },
+        { name: "Taruwarsh", age: 30 },
+        { name: "Shruti", age: 34 },
+        { name: "Ritu", age: 20 },
+        { name: "Yogita", age: 26 },
+        { name: "Aman", age: 20 },
+      ];
+      var personAge = persons
+        .filter((age1) => age1.age < 25)
+        .sort((n1, n2) => n1.age - n2.age)
+        .reverse();
+      var a = JSON.stringify(personAge, " ", "<br>");
+      var b = a.replace(/[\[\]']+/g, "");
+      var c = b.replace(/[{}]/g, "");
+      var d = c.replace(/"/g, "");
+      var e = d.replace(/,/g, "");
+      document.getElementById("p1").innerHTML = e;
+      //   document.write("<br>" + JSON.stringify(personAge));
+    </script>
+  </body>
+</html>

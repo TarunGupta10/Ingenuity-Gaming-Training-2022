@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Assignment-10(d)</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+background: #01FF1C;
+background: -webkit-linear-gradient(right, #01FF1C, #01FDFF);
+background: -moz-linear-gradient(right, #01FF1C, #01FDFF);
+background: linear-gradient(to left, #01FF1C, #01FDFF);
+      }
+      #p1 {
+        margin: 120px;
+        text-align: center;
+        font-size: 40px;
+      }
+    </style>
+  </head>
+  <body>
+    <h2 id="p1"></h2>
+    <script>
+      let persons = [
+        { name: "Tarun", age: 21 },
+        { name: "Astha", age: 22 },
+        { name: "Prachi", age: 18 },
+        { name: "Taruwarsh", age: 30 },
+        { name: "Aman", age: 34 },
+        { name: "Ritu", age: 20 },
+      ];
+      var fullName = persons.map((u) => {
+        return "<br>" + "My Name is " + u.name + "  and age is " + u.age;
+      });
+      document.getElementById("p1").innerHTML = fullName;
+      // document.write((fullName));
+      // console.log(fullName);
+    </script>
+  </body>
+</html>

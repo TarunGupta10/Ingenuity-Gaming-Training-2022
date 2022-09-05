@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Assignment-13(b)</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        background: #59ff79;
+        background: -webkit-linear-gradient(left, #59ff79, #685eff);
+        background: -moz-linear-gradient(left, #59ff79, #685eff);
+        background: linear-gradient(to right, #59ff79, #685eff);
+      }
+      #btn {
+        padding: 15px 20px;
+        font: 13px;
+        font-weight: 700;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        text-decoration: none;
+        text-align: center;
+        margin-left: 600px;
+        margin-top: 300px;
+      }
+
+      #btn:hover {
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
+          0 6px 20px 0 rgba(0, 0, 0, 0.2);
+      }
+      .button2 {
+        color: black;
+        background-color: #008080;
+        transition: 0.2s ease-in-out;
+        border-left: 3px transparent solid;
+        border-right: 3px transparent solid;
+      }
+
+      .button2:hover {
+        color: #008080;
+        background-color: black;
+        border-left: #008080 4px solid;
+        border-right: #008080 4px solid;
+      }
+    </style>
+  </head>
+  <body>
+    <button id="btn" class="button2" onclick="openWindow()">
+      Open Contact Form
+    </button>
+    <script>
+         alert("Please Enable Pop-up Blocker")
+      function openWindow() {
+        alert("Please Enable Pop-up")
+        var url = "./form.html";
+        var windowSize = "height=650, width=800";
+        var newWindow = window.open(url, "Typing Page", windowSize);
+        newWindow.moveTo(450, 100);
+      }
+      setTimeout(
+        function openWindow() {
+          var url = "./form.html";
+          var windowSize = "height=650, width=800";
+          var newWindow = window.open(url, "Typing Page", windowSize);
+          newWindow.moveTo(450, 100);
+        },
+
+        10000 /// milliseconds = 10 seconds
+      );
+    </script>
+  </body>
+</html>

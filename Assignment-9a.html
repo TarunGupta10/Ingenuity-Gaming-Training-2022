@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Assignment-9(a)</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        background: #eb755a;
+        background: -webkit-linear-gradient(left, #eb755a, #d95cf3);
+        background: -moz-linear-gradient(left, #eb755a, #d95cf3);
+        background: linear-gradient(to right, #eb755a, #d95cf3);
+      }
+      #p1 {
+        text-align: center;
+        margin: 300px;
+        font-size: 40px;
+        font-family: "Pacifico", cursive;
+      }
+    </style>
+  </head>
+  <body>
+    <h2 id="p1"></h2>
+    <script>
+      function add() {
+        let sum = 0;
+        while (true) {
+          const num = parseInt(
+            prompt(
+              "Enter a positive integer for summation and 0 to terminate : "
+            )
+          );
+          if (num > 0) {
+            sum += num;
+          } else {
+            break;
+          }
+        }
+
+        return sum;
+      }
+      document.getElementById("p1").innerHTML = "Your Sum is : " + add();
+      // document.write(add());
+    </script>
+  </body>
+</html>

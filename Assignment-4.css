@@ -1,0 +1,370 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+.container {
+  max-width: 1400px;
+  /* width: 100%; */
+  margin: auto;
+}
+.header {
+  position: sticky;
+  top: 0;
+  background-color: rgb(148, 90, 15);
+  height: 70px;
+  padding: 0px 20px;
+}
+.header .menu {
+  list-style: none;
+  float: right;
+}
+.menu li {
+  display: inline-flex;
+  line-height: 70px;
+}
+.menu li a:hover{
+    transform: scale(0.9);
+    
+}
+.menu li:hover{
+    background-color: rgb(215, 122, 0);
+    border-radius: 20px;
+}
+ul li a {
+  text-decoration: none;
+  color: white;
+  font-size: 20px;
+  padding: 0px 20px;
+  text-transform: uppercase;
+  transition: 0.4s;
+}
+.imgdiv {
+  background-image: url(./images/Wallpaper.jpg);
+  height: 90vh;
+  margin-top: 20px;
+  background-repeat: inherit;
+}
+.imgdiv h3 {
+  margin: 20px;
+  font-size: 60px;
+}
+#sec-1 {
+    font-size: 40px;
+margin-top: 20px;
+  display: flex;
+  justify-content: center;
+}
+ .teamcontainer img:hover{
+    transform: scale(1.1);
+}
+.teamcontainer {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  padding: 5px;
+  justify-content: space-evenly;
+  
+}
+.teamcontainer img {
+    
+  width: 25%;
+  height: auto;
+  border-radius: 50%;
+  padding: 15px;
+}
+h1{
+    text-align: center;
+    margin: 20px;
+    font-size: 40px;
+}
+main{
+    width: 50%;
+    height: 500px;
+    overflow: hidden;
+    background-color: grey;
+    display: flex;
+    justify-content: center;
+    line-height: 1.5;
+}
+#sec-2{
+    display: flex;
+}
+main
+{
+    display: flex;
+    flex-direction: column;
+}
+/* main img{
+    width: 700px;
+    height: 700px;
+} */
+/* main video{
+    width: 700px;
+    height: 700px;
+ 
+} */
+
+
+aside{
+    width: 50%;
+    height: 500px;
+    overflow: hidden;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    margin-left: 15px;
+}
+aside > .box{
+    height: 150px;
+    width: 100%;
+}
+.techcontainer{
+    display: inline-flex;
+}
+/* .techcontainer .card:hover{
+    transform: scale(1.03);
+} */
+.card {
+    background-color: gainsboro;
+    width: 23%;
+    margin: auto;
+    border-radius: 0.5rem;
+  }
+  .card h2,
+  p {
+    padding: 7px;
+    /* padding-top: 7px;
+    padding-bottom: 7px; */
+    text-align: center;
+    font-family: 'Karla', sans-serif;
+  }
+  .card a {
+    text-align: center;
+    display: block;
+    background-color: rgb(230, 107, 107);
+    padding: 10px;
+    margin: auto;
+    margin-bottom: 0.2rem;
+    color: white;
+    text-decoration: none;
+    border-radius: 0.5rem;
+  }
+  .card a:hover {
+    color: black;
+    background-color: rgb(249, 75, 75);
+  }
+  footer
+{
+    margin-top: 20px;
+    width: 100%;
+    background-color: rgb(26, 26, 26);
+}
+.section-1
+{
+    margin: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    border-bottom: 1px solid rgb(44, 44, 44);
+    padding-top: 25px;
+    padding-bottom: 25px; 
+}
+.about
+{
+    width: 40%;
+    margin: 0 15px;
+}
+.about h2
+{
+    color: white;
+    text-transform: uppercase;
+}
+.about p 
+{
+    color: gray;
+    text-align: justify;
+    line-height: 25px;
+}
+.category
+{
+    width: 20%;
+}
+.category h2
+{
+    color: white;
+    text-transform: uppercase;
+}
+.category ul
+{
+    list-style: none;
+}
+.category ul li
+{
+    padding: 1px;
+    margin-bottom: 5px;
+}
+.category ul li a
+{
+    text-decoration: none;
+    text-transform:capitalize;
+    color: gray;
+}
+.quicklinks
+{
+    width: 20%;
+}
+.quicklinks h2
+{
+    color: white;
+    text-transform: uppercase;
+}
+.quicklinks ul
+{
+    list-style: none;
+}
+.quicklinks ul li
+{
+    padding: 1px;
+    margin-bottom: 5px;
+}
+.quicklinks ul li a
+{
+    text-decoration: none;
+    text-transform:capitalize;
+    color: gray;
+}
+.contactus
+{
+    width: 26%;
+}
+.contactus h2
+{
+    color: white;
+    text-transform: uppercase;
+}
+.contactus ul
+{
+    list-style: none;
+}
+.contactus ul li
+{
+    padding: 1px;
+    margin-bottom: 5px;
+}
+.contactus ul li a
+{
+    text-decoration: none;
+    text-transform:capitalize;
+    color: gray;
+}
+.contactus ul li i
+{
+    color: gray;
+    margin-right: 5px;
+}
+.section-2
+{
+border-bottom: 1px solid rgb(44, 44, 44);
+}
+.section-2 p
+{
+    text-align: center;
+    color: gray;
+    font-size: 30px;
+    margin: 30px;
+}
+.section-2 p a
+{
+    text-decoration: none;
+    background-color: rgb(255, 75, 75);
+    color: white;
+    padding: 8px;
+    border-radius: 35px;
+}
+.section-2 p a:hover{
+    background-color: rgb(255, 41, 41);
+    transform: scale(0.8);
+}
+.section-3 ul
+{
+    display: flex;
+    justify-content: center;
+}
+.section-3 ul li
+{
+    list-style: none;
+    margin: 15px 30px;
+}
+.section-3 ul li a
+{
+    text-decoration: none;
+}
+.section-3 ul li a i
+{
+    color: gray;
+    width: 70px;
+    padding: 20px;
+    text-align: center;
+    font-size: 30px;
+    border-radius: 50%;
+    transition: all 0.3s;
+}
+.fa-facebook:hover
+{
+    background-color: blue;
+    color: white;
+}
+.fa-twitter:hover
+{
+    background-color: rgb(60, 182, 231);
+    color: white;
+}
+.fa-google:hover
+{
+    background-color:red;
+    color: white;
+}
+.fa-linkedin:hover
+{
+    background-color: blue;
+    color: white;
+}
+.fa-instagram:hover
+{
+    background-color: rgb(255, 0, 111);
+    color: white;
+}
+.section-4
+{
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    padding: 30px;
+}
+.section-4 p
+{
+    color: gray;
+    position: relative;
+}
+.section-4 p::after
+{
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    position: absolute;
+    right:0;
+    bottom:-10px;
+    background-color:yellow;
+    transition: all .3s;
+}
+.section-4 p:hover::after
+{
+    width: 100%;
+}
+
+  

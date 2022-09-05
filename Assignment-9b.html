@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Assignment-9(b)</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        background: #5aeb6a;
+        background: -webkit-linear-gradient(left, #5aeb6a, #5cf3ea);
+        background: -moz-linear-gradient(left, #5aeb6a, #5cf3ea);
+        background: linear-gradient(to right, #5aeb6a, #5cf3ea);
+      }
+      #p1 {
+        text-align: center;
+        margin: 300px;
+        font-size: 40px;
+        font-family: "Indie Flower", cursive;
+      }
+    </style>
+  </head>
+  <body>
+    <h2 id="p1"></h2>
+
+    <script>
+      function getNames() {
+        let firstName = prompt("Enter your First Name  : ");
+        let lastName = prompt("Enter your Last Name  : ");
+        let company = prompt("Enter your Company Name  : ");
+        let designation = prompt("Enter your designation in Company  : ");
+
+        return {
+          firstName,
+          lastName,
+          company,
+          designation,
+        };
+      }
+      const name = getNames();
+      document.getElementById(
+        "p1"
+      ).innerHTML = `My Name is ${name.firstName} ${name.lastName} working in ${name.company} as ${name.designation}`;
+      // document.write(`My Name is ${name.firstName} ${name.lastName} working in ${name.company} as ${name.designation}`);
+    </script>
+  </body>
+</html>

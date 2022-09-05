@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Canvas</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+      body {
+        min-height: 100vh;
+        color: white;
+        background-color: rgba(0, 0, 0, 0.755);
+        font-family: arial;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+      }
+      #canvas {
+        margin-top: 10px;
+        /* background-color: azure; */
+        /* background-image: url("./images/game3.png"); */
+        /* background: #aaf1ff;
+        background: -webkit-linear-gradient(left, #aaf1ff, #fdff5e);
+        background: -moz-linear-gradient(left, #aaf1ff, #fdff5e);
+        background: linear-gradient(to right, #aaf1ff, #fdff5e); */
+        background: url("../images/fb.png") no-repeat fixed center;
+        background-size: inherit;
+        border-radius: 10px;
+      }
+      h1 {
+        font-family: "Press Start 2P", cursive;
+        margin-bottom: 20px;
+        background: #01eeff;
+        background: -webkit-linear-gradient(right, #01eeff, #d035ba);
+        background: -moz-linear-gradient(right, #01eeff, #d035ba);
+        background: linear-gradient(to left, #01eeff, #d035ba);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+
+      #source {
+        display: none;
+      }
+      #source1 {
+        display: none;
+      }
+      #img1{
+display: none;
+      }
+      #img{
+        display: inline-flex;
+      }
+    </style>
+  </head>
+
+  <body>
+    <audio controls loop hidden id="myAudio" >
+      <source src="../images/Song.mp3" type="audio/mp3" />
+  </audio>
+<img src="../images/icons8-volumeup-50.png" alt=""  id="img1">
+  <img src="../images/icons8-volumedown-50.png" alt=""  id="img2">
+    <h1>Football Game</h1>
+    <canvas id="canvas" width="900" height="600"> </canvas>
+    <!-- <img src="https://i.ibb.co/HHBFJdH/char.png" alt="" id="source" /> -->
+    <img src="../images/amongus-removebg-preview.png" alt="" id="source" />
+    <img src="../images/icons8-football-32.png" alt="" id="source1" />
+    <script src="./test.js"></script>
+  </body>
+</html>
+
+
+<!-- https://gonzalosimon.hashnode.dev/football-game-with-javascript-part-1 -->
+<!-- football game in canvas js function -->
